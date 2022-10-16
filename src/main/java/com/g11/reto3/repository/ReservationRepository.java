@@ -20,17 +20,12 @@ public class ReservationRepository {
     }
 
     public Optional<Reservation> getReservation(int id){ // se usa optional en caso de que no hayan datos
-
         return reservationCrudRepository.findById(id);
     }
 
-    public Reservation save (Reservation re){
-
-        return reservationCrudRepository.save(re);
+    public Reservation save (Reservation reservation){
+        return reservationCrudRepository.save(reservation);
     }
 
-    public void delete (Reservation re){
 
-        reservationCrudRepository.delete(re);
     }
-}

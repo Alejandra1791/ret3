@@ -24,8 +24,6 @@ public class MotorbikeRepository {
     public Motorbike save (Motorbike p){
         return motorbikeCrudRepository.save(p);
     }
-    public void delete(Motorbike p){
-        motorbikeCrudRepository.delete(p);
+
     }
 
-}

@@ -3,13 +3,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 
+import java.io.Serializable;
 import java.util.List;
 
 
 @Entity
 @Table(name = "motorbike")
 
-public class Motorbike {
+public class Motorbike implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -23,8 +24,8 @@ public class Motorbike {
 
 
     @ManyToOne //relación de muchos a pocos en la categoría
-    @JoinColumn(name = "categoryId")
-    @JsonIgnoreProperties("motorbikes")
+    @JoinColumn(name = "CategoryId")
+    @JsonIgnoreProperties("motorbike")
     private Category category;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "motorbike")
