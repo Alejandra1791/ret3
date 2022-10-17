@@ -1,31 +1,32 @@
 package com.g11.reto3.Entetities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
-
-
-import java.io.Serializable;
 import java.util.List;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "motorbike")
+@Table(name = "motorbikes")
+public class Motorbike  {
 
-public class Motorbike implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
-
-
     private String name;
     private String brand;
+    @Column(name="years")
     private Integer year;
     private String description;
 
 
-    @ManyToOne //relación de muchos a pocos en la categoría
+    @ManyToOne //relación de muchos a pocos en la categoría//
     @JoinColumn(name = "CategoryId")
-    @JsonIgnoreProperties("motorbike")
+    @JsonIgnoreProperties("motorbikes")
     private Category category;
 
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "motorbike")
@@ -42,6 +43,10 @@ public class Motorbike implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
@@ -96,9 +101,7 @@ public class Motorbike implements Serializable {
         this.reservations = reservations;
     }
 
-    public String getName() {
-        return name;
-    }
+
 }
 
 

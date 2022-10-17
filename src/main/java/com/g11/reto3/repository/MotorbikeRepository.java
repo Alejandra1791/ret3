@@ -21,8 +21,8 @@ public class MotorbikeRepository {
         return motorbikeCrudRepository.findById(id);
     }
 
-    public Motorbike save (Motorbike p){
-        return motorbikeCrudRepository.save(p);
+    public Motorbike save (Motorbike motorbike){
+        return motorbikeCrudRepository.save(motorbike);
     }
 
     }
