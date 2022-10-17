@@ -1,6 +1,7 @@
 package com.g11.reto3.Entetities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "motorbikes")
-public class Motorbike  {
+public class Motorbike implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

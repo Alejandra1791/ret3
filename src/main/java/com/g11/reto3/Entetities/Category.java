@@ -1,6 +1,8 @@
 package com.g11.reto3.Entetities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -11,7 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name = "category")
-public class Category {
+public class Category implements Serializable {
     //mandar una instancia de una lado al otro y recrearla para que se reconstruya  al otro lado//
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // autoincrement
