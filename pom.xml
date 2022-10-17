@@ -6,13 +6,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
-    <groupId>com.g11</groupId>
-    <artifactId>Reto3</artifactId>
+    <groupId>com.usa</groupId>
+    <artifactId>Reto3D</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Reto3</name>
-    <description>Reto3</description>
+    <name>Reto3D</name>
+    <description>Reto3D</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -24,11 +24,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -52,7 +47,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -61,5 +55,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
